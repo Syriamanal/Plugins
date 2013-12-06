@@ -18,7 +18,7 @@ class Talk implements Plugin{
     $this -> api = $api;
     $this -> crafting = array();
     $this -> diamond = array();
-    }
+     }
  
     public function init(){
 	$this->api->console->register("pig ","Sends a message to a user", array($this, "pig"));
