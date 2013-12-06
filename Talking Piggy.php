@@ -35,7 +35,7 @@ class Talk implements Plugin{
             return true;
     }
 
-    public function send($cmd, $args, $issuer){
+    public function pig($cmd, $args, $issuer){
      		 $username = $issuer->username;
     		 $this->api->chat->sendTo(false, "<Piggly> Well I Cant Move Their is no mob api yet ok!", $username);
    }
