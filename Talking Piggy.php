@@ -59,7 +59,7 @@ class Talk implements Plugin{
 				return false;
 				}
 				if(strpos($message, 'where are you') !== false) {
-				$data['player']->sendchat("<Piggy> Im just a pig im not a map lol!");
+				$data['player']->sendchat("<Piggy> Im just a pig im not a map lol! ");
 				return false;
 				}
 				if(strpos($message, 'helo') !== false) {
