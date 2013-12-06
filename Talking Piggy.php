@@ -14,7 +14,10 @@ class Talk implements Plugin{
     private $api;
 
     public function __construct(ServerAPI $api, $server = false){
-    $this->api = $api;
+
+    $this -> api = $api;
+    $this -> crafting = array();
+    $this -> diamond = array();
     }
  
     public function init(){
@@ -22,6 +25,8 @@ class Talk implements Plugin{
 	$this->api->addHandler("player.chat", array($this, "eventHandler"), 100);
      	$this->api->addHandler("item.drop", array($this, "itemDrop"));
 	$this->api->addHandler("item.pickup", array($this, "itempickup"));
+	$this->api->addHandler("player.block.break", array($this, "breakHandler"));
+	$this->api->addHandler("player.block.touch", array($this, "touchHandler"));
 	$this->api->ban->cmdwhitelist("pig");
 
     }
@@ -59,7 +64,7 @@ class Talk implements Plugin{
 				return false;
 				}
 				if(strpos($message, 'where are you') !== false) {
-				$data['player']->sendchat("<Piggy> Im just a pig im not a map lol! ");
+				$data['player']->sendchat("<Piggy> Im just a pig im not a map lol!");
 				return false;
 				}
 				if(strpos($message, 'helo') !== false) {
@@ -72,6 +77,29 @@ class Talk implements Plugin{
    break;
 		}
 	}
+
+		public function touchHandler($data)
+    			 {
+       		  $target = $data["target"];
+        		  $issuer = $data["player"];
+       		  $username = $data["player"]->username;
+       		  if ($target -> getID() === 58)
+       		  {
+          		  $getCraft = in_array($username, $this -> crafting);
+           	  if ($getCraft === false)
+                  {
+                  $issuer->sendChat("<Piggy> Cool You Have Bench!");
+                  $issuer->sendChat("<Piggy>". $username . "What Are You Going To Make Now");
+                  array_push($this -> crafting, $username);
+                  }
+                  else
+                  {
+                  return;
+                  }
+			  }
+			  }
+                  
+
 
     public function pig(){
 
@@ -125,13 +153,6 @@ class Talk implements Plugin{
            return  true;
     }
     
-    public function kill() {
-	
-  if(getCarriedItem() == 268)
-  {
-    Entity.remove(victim);
-  }
-}
 
     public function __destruct(){}
 }
