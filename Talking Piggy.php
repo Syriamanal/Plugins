@@ -39,6 +39,10 @@ class Talk implements Plugin{
      		 $username = $issuer->username;
     		 $this->api->chat->sendTo(false, "<Piggly> Well I Cant Move Their is no mob api yet ok!", $username);
    }
+   else{
+   	$this->api->chat->sendTo(false, "<Piggly> Wrong command!", $username)
+   	
+   }
 
     public function itempickup(){
             return true;
