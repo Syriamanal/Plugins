@@ -1,3 +1,3 @@
 Plugins
 =======
-This Are All My PLugins I will Add More Later You are Not Alloud to say you made thies plugins and do not claim what is not Yours!!!
+This Are All My Plugins I will Add More Later You are Not Allowed to say you made these plugins and do not claim what is not Yours!!!
