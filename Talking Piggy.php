@@ -1,7 +1,7 @@
 <?php
 
 /*
-__PocketMine Plugin__
+__PocketMine Plugin__ 
 name=Piggy
 description=
 version=1.5
