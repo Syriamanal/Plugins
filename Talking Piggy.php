@@ -32,21 +32,20 @@ class coma implements Plugin{
                                 " <Piggy> Hello my name is Piggy",
                                 " <Piggy> Can I be op LOL I'm just Kidding",
                                 " <Piggy> Who is the server owner!",
-                                " <Piggy> I Want to eat!",
+                                " <Piggy> I want to eat!",
                                 " <Piggy> Hello people!",
-                                " <Piggy> I want a better home pleas!",
+                                " <Piggy> I want a better home please!",
                                 " <Piggy> Kill me and get banned",
                                 " <Piggy> I like Carrots!",
                                 " <Piggy> Hello New People!",
                                 " <Piggy> I hate killers!",
-                                " <Piggy> Tell PocketMine To Unban Syriamanal!",
                                 " <Piggy> Bat Man!",
                                 " <Piggy> I love this server!",
                                 " <Piggy> This Is the worlds best server!",
                                 " <Piggy> I made a home here!",
                                 " <Piggy> I am the best Pig!",
                                 " <Piggy> I am well trained!",
-                                " <Piggy> I Am Bord!",
+                                " <Piggy> I Am Board!",
                                 " <Piggy> Team any one!",
                                 " <Piggy> I am op!",
                                 " <Piggy> I am Server Owner jk!",
@@ -55,7 +54,6 @@ class coma implements Plugin{
                                 " <Piggy> Lamo!",
                                 " <Piggy> Syriamanal",
                                 " <Piggy> Syriamanal Made This Plugin!",
-                                " <Piggy> Op Him Pleas!"
                              );
                 }
 
